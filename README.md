@@ -1,6 +1,6 @@
 
 ## Hello, friend!
-# LoveWindowsAgain App
+# The App to LoveWindowsAgain 
 ###  are you ready to love Windows again?
 
 ![screenshot](https://github.com/builtbybel/LoveWindowsAgain/blob/main/assets/lwa.png)
