@@ -4,7 +4,7 @@
 ###  are you ready to love Windows again?
 
 ![screenshot](https://github.com/builtbybel/LoveWindowsAgain/blob/main/assets/lwa.png)
-_This is not a product made by Microsoft and it's in no way related to them._
+
  
 **Like many things in life, Windows 11 is a mixed bag.**
 
