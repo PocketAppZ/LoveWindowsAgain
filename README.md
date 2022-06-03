@@ -1,6 +1,6 @@
 
 ### Hello, friend!
-# are you ready to LoveWindowsagain?
+# are you ready to LoveWindowsAgain?
 
 ![screenshot](https://github.com/builtbybel/LoveWindowsAgain/blob/main/assets/lwa.png)
 
