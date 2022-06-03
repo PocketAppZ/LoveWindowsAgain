@@ -1,7 +1,7 @@
 
 ## Hello, friend!
-# The LoveWindowsAgain App
-###  are you eady to love Windows again?
+# LoveWindowsAgain App
+###  are you ready to love Windows again?
 
 ![screenshot](https://github.com/builtbybel/LoveWindowsAgain/blob/main/assets/lwa.png)
  _This is not a product made by Microsoft and it's in no way related to them._
