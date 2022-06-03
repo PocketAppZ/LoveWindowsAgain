@@ -18,9 +18,4 @@ This was not possible with ThisIsWin11 for various technical reasons. Some addit
 
 Source code will be published soon...
 
- ## Download and installing
- 
- ### Download directly from GitHub
 - [Click here to download the LoveWindowsAgain app](https://github.com/builtbybel/LoveWindowsAgain/releases)
-
-
