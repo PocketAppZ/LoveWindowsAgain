@@ -5,15 +5,12 @@
 ![screenshot](https://github.com/builtbybel/LoveWindowsAgain/blob/main/assets/lwa.png)
 
  
-**Like many things in life, Windows 11 is a mixed bag.**
+**Like many things in life, Windows 11 is a mixed bag.** It is full of interesting features, but you’ll probably never utilize many of them. For example, the frustrating and truncated context menus, then the stuff in the taskbar you never use such as the Widgets feature, the Search, Chat and Task view icons etc., the start menu is essentially gone, the XPS Documents Writer and Fax Printer are some of that OS less essential features. So, why not disable these Windows 11 components you don’t need? 
 
-We've been working with the system for some time now and have gotten used to a few things.
-And for the things we don't like, there are plenty of third-party tools, such as ThisIsWin11 to fix the issues, and registry hacks to go back to the good old days.
+Some of you know my most comprehensive tool in this direction - namely the [ThisIsWin11](https://github.com/builtbybel/ThisIsWin11) tools - But unlike the mentioned app, **LoveWindowsAgain** will adress ONLY unnecessary Windows 11 features and try to fix them with minimal effort. It is the easiest and fastest app of its kind to set numerous settings with just one click. 
 
-Unlike [ThisIsWin11](https://github.com/builtbybel/ThisIsWin11) this app will adress ONLY unnecessary Windows 11 features and try to fix them with minimal effort..
-
-**The motivation behind this app was to strip down the app to the essentials** and laid the foundation for a release in the Microsoft Store (if Microsoft should have nothing against the app name). 
-This was not possible with ThisIsWin11 for various technical reasons. Some additional modules are based on the above app and already integrated.
+**The motivation behind this app was to strip down the app to the essentials, so that everyone, and I really mean everyone, should be able to handle it. It follows the design language of the operating system and the usage should be self-explanatory.** I tried also to laid the foundation for a release in the Microsoft Store (if Microsoft should have nothing against the app name). 
+This was not possible with _ThisIsWin11_ for various technical reasons. Some additional modules are based on the above app and already integrated.
 
 Source needs some refactoring and will be published soon...
 
