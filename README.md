@@ -5,7 +5,7 @@
 ![screenshot](https://github.com/builtbybel/LoveWindowsAgain/blob/main/assets/lwa.png)
 
 
- 
+## About this app 
 **Like many things in life, Windows 11 is a mixed bag.** It is full of interesting features, but you’ll probably never utilize many of them. For example, the frustrating and truncated context menus, then the stuff in the taskbar you never use such as the Widgets feature (at the current stage), the Search, Chat and Task view icons etc., the start menu is essentially gone, the XPS Documents Writer and Fax Printer are some of that OS less essential features. So, why not disable these Windows 11 components you don’t need? 
 
 Some of you know my most comprehensive tool in this direction - namely the [ThisIsWin11](https://github.com/builtbybel/ThisIsWin11) tools - But unlike the mentioned app, **LoveWindowsAgain** _(you can also call me LovaApp)_ will adress ONLY unnecessary Windows 11 features and try to fix them with minimal effort. 
@@ -19,4 +19,10 @@ This was not possible with _ThisIsWin11_ for various technical reasons. Some add
 
 **Source needs some refactoring and will be published soon...**
 
-**DOWNLOAD:** [Click here to download the LoveWindowsAgain app](https://github.com/builtbybel/LoveWindowsAgain/releases)
+## Download
+- [Click here to download the LoveWindowsAgain app](https://github.com/builtbybel/LoveWindowsAgain/releases)
+
+## Requirements
+The app is currently developed for and tested against Windows 11 until Build 22598.200 
+
+Several tweaks and the **More Tools** section should also work on Windows 10, but  I have not tested it myself.
