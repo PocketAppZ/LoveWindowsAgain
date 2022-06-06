@@ -12,7 +12,7 @@ Some of you know my most comprehensive tool in this direction - namely the [This
 
 It is the easiest and fastest app of its kind to set numerous settings with just one click. 
 
-**The motivation behind this app was to strip down the features to the essentials, so that everyone, and I really mean everyone, should be able to handle it. Problems are rated according to the levels LOW, MIDDLE and HIGH.** The app follows the design language of the operating system and the usage should be self-explanatory
+The motivation behind this app was to strip down the features to the essentials, so that everyone should be able to handle it. Problems are rated according to the levels LOW, MIDDLE and HIGH. The app follows the design language of the operating system and the usage should be self-explanatory
 
 I tried also to laid the foundation for a release in the Microsoft Store (if Microsoft should have nothing against the app name). 
 This was not possible with _ThisIsWin11_ for various technical reasons. Some additional modules are based on the above app and already integrated.
