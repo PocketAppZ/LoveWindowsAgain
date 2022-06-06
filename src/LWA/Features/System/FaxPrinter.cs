@@ -19,7 +19,7 @@ namespace Features.Feature.System
 
         public override bool CheckFeature()
         {
-            logger.Log("Problem on System [UNKNOWN]: Fax Printer check can not be performed, but we can remove it.");
+            logger.Log("Problem on System: [UNKNOWN] Fax Printer check can not be performed, but we can remove it.");
             return false;
         }
 
