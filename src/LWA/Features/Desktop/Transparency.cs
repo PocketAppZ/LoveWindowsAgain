@@ -13,7 +13,7 @@ namespace Features.Feature.Desktop
 
         public override string ID()
         {
-            return "Disable acrylic Fluent Design effects";
+            return "[LOW] Disable acrylic Fluent Design effects";
         }
 
         public override string Info()

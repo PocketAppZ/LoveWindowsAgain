@@ -13,7 +13,7 @@ namespace Features.Feature.System
 
         public override string ID()
         {
-            return "Disable Microsoft Teams on Startup";
+            return "[LOW] Disable Microsoft Teams on Startup";
         }
 
         public override string Info()
@@ -27,7 +27,7 @@ namespace Features.Feature.System
 
             if (Registry.GetValue(keyName, AppValue, null) == null)
             {
-                logger.Log("Problem on System (solved): Teams AutoStart is already disabled.");
+                logger.Log("Problem on System [SOLVED]: Teams AutoStart is already disabled.");
                 return false;
             }
             else

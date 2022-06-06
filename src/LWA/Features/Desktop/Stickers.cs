@@ -12,7 +12,7 @@ namespace Features.Feature.Desktop
 
         public override string ID()
         {
-            return "Remove Desktop Stickers";
+            return "[HIGH] Remove Desktop Stickers";
         }
 
         public override string Info()

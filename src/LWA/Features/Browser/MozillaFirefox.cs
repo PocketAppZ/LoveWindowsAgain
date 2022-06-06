@@ -12,7 +12,7 @@ namespace Features.Feature.Browser
 
         public override string ID()
         {
-            return "Disable Mozilla Firefox Telemetry";
+            return "[HIGH] Disable Mozilla Firefox Telemetry";
         }
 
         public override string Info()

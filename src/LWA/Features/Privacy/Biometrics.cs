@@ -13,7 +13,7 @@ namespace Features.Feature.Privacy
 
         public override string ID()
         {
-            return "Disable Windows Hello Biometrics";
+            return "[LOW] Disable Windows Hello Biometrics";
         }
 
         public override string Info()

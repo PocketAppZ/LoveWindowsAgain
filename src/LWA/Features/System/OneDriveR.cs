@@ -12,7 +12,7 @@ namespace Features.Feature.System
 
         public override string ID()
         {
-            return "Uninstall OneDrive";
+            return "[MIDDLE] Uninstall OneDrive";
         }
 
         public override string Info()

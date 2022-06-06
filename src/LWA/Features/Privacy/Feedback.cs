@@ -14,7 +14,7 @@ namespace Features.Feature.Privacy
 
         public override string ID()
         {
-            return "Disable Feedback notifications";
+            return "[HIGH] Disable Feedback notifications";
         }
 
         public override string Info()

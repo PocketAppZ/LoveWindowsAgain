@@ -11,7 +11,7 @@ namespace Features.Feature.Explorer
 
         public override string ID()
         {
-            return "Enable Windows 10 File Explorer";
+            return "[LOW] Enable Windows 10 File Explorer";
         }
 
         public override string Info()

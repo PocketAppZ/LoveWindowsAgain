@@ -13,7 +13,7 @@ namespace Features.Feature.Privacy
 
         public override string ID()
         {
-            return "Disable Advertising ID for Relevant Ads";
+            return "[HIGH] Disable Advertising ID for Relevant Ads";
         }
 
         public override string Info()

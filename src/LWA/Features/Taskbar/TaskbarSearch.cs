@@ -13,7 +13,7 @@ namespace Features.Feature.Taskbar
 
         public override string ID()
         {
-            return "Hide Search icon on taskbar";
+            return "[LOW] Hide Search icon on taskbar";
         }
 
         public override string Info()

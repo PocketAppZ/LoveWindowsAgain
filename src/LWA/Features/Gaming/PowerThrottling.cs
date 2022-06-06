@@ -12,7 +12,7 @@ namespace Features.Feature.Gaming
 
         public override string ID()
         {
-            return "Disable PowerThrottling";
+            return "[MIDDLE] Disable PowerThrottling";
         }
 
         public override string Info()
