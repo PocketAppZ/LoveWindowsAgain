@@ -27,5 +27,5 @@ The app is currently developed for and tested against Windows 11 until Build 225
 
 Several tweaks and the **More Tools** section should also work on Windows 10, but  I have not tested it myself.
 
-## Credits
+## Acknowledgements
 Icon by [Alfredo Creates, CC Atribution](https://icon-icons.com/de/symbol/Unternehmens-social-media-logo-Marke-windows/82803)
