@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace LoveWindowsAgain.OpenTweaks.ITreeNode
+namespace LoveWindowsAgain.ITreeNode
 {
     public static class ITreeNode
     {
