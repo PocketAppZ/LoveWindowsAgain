@@ -12,13 +12,16 @@ Some of you know my most comprehensive tool in this direction - namely the [This
 
 It is the easiest and fastest app of its kind to set numerous settings with just one click. 
 
+### How to use
 The motivation behind this app was to strip down the features to the essentials, so that everyone should be able to handle it. 
+- Once opened only a big `Analyze your Win11 Build` button awaits you, waiting to be pressed
 - Problems are rated according to the levels Low, Middle and High. 
 - If you want more control over the individual options, you can also switch to the advanced view. 
 Just click on the `Kebab menu/More options icon > Advanced mode` in the top right corner. 
 - Problems classified in Low level can be suppresed in the Kebab menu > `Ignore Low level problems`
 - The app follows the design language of the operating system and the further use should be self-explanatory
 
+### Notes
 I tried also to laid the foundation for a release in the Microsoft Store (if Microsoft should have nothing against the app name). 
 This was not possible with _ThisIsWin11_ for various technical reasons. Some additional modules are based on the above app and already integrated.
 
