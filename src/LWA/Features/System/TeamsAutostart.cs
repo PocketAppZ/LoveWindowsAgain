@@ -32,7 +32,7 @@ namespace Features.Feature.System
             }
             else
             {
-                logger.Log("Teams AutoStart is enabled.");
+                // logger.Log("Teams AutoStart is enabled.");
                 return true;
             }
         }
