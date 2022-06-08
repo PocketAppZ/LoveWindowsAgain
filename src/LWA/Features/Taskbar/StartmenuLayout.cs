@@ -4,7 +4,7 @@ using System;
 
 namespace Features.Feature.Taskbar
 {
-    internal class StartmenuLayout: FeatureBase
+    internal class StartmenuLayout : FeatureBase
     {
         private static readonly ErrorHelper logger = ErrorHelper.Instance;
 

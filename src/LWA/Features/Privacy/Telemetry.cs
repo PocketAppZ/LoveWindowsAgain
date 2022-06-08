@@ -26,8 +26,8 @@ namespace Features.Feature.Privacy
 
         public override bool CheckFeature()
         {
-           // WindowsHelper.IsServiceRunning("DiagTrack");
-           // WindowsHelper.IsServiceRunning("dmwappushservice");
+            // WindowsHelper.IsServiceRunning("DiagTrack");
+            // WindowsHelper.IsServiceRunning("dmwappushservice");
 
             return !(
                  RegistryHelper.IntEquals(dataCollection, "AllowTelemetry", desiredValue) &&
