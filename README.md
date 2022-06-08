@@ -25,8 +25,6 @@ Just click on the `Kebab menu/More options icon > Advanced mode` in the top righ
 I tried also to laid the foundation for a release in the Microsoft Store (if Microsoft should have nothing against the app name). 
 This was not possible with _ThisIsWin11_ for various technical reasons. Some additional modules are based on the above app and already integrated.
 
-**Source needs some refactoring and will be published soon...**
-
 ### Installation
 You can download the application on the [Releases page](https://github.com/builtbybel/LoveWindowsAgain/releases).
 
