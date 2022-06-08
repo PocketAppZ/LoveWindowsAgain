@@ -31,7 +31,7 @@ This was not possible with _ThisIsWin11_ for various technical reasons. Some add
 You can download the application on the [Releases page](https://github.com/builtbybel/LoveWindowsAgain/releases).
 
 ### Requirements
-The app is currently developed for and tested against Windows 11 until Build 22621 
+The app is currently developed for and tested against Windows 11, version 22H2 Build 22621
 
 Several tweaks and the **More Tools** section should also work on Windows 10, but  I have not tested it myself.
 
