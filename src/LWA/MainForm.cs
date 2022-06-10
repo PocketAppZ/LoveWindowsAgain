@@ -29,13 +29,12 @@ namespace LoveWindowsAgain
             this.AddFeatures();
             this.AddMoreTools();
             this.SetStyle();
-            this.App.CheckForUpdates();
-    
         }
 
         private void SetStyle()
         {
-            btnMenu.Text = "\u22ee";
+            btnAppOptions.Text = "\uE70D";
+            btnKebapMenu.Text = "\u22ee";
             btnSettings.Text = "\uE713";
             btnAnalyze.Text += "\x20" + OsHelper.thisOS;
 
@@ -207,6 +206,13 @@ namespace LoveWindowsAgain
                 Checked = true,
             };
 
+            TreeNode apps = new TreeNode("Apps", new TreeNode[] {
+                new FeatureNode(new Features.Feature.Apps.StoreApps()),
+            })
+            {
+                Checked = true,
+            };
+
             root.Nodes.AddRange(new TreeNode[]
             {
                 browser,
@@ -217,6 +223,7 @@ namespace LoveWindowsAgain
                 gaming,
                 privacy,
                 components,
+                apps,
             });
 
             treeFeatures.Nodes.Add(root);
@@ -286,10 +293,10 @@ namespace LoveWindowsAgain
 
             logger.Log(sum.ToString(), "");
             */
-            lnkSubHeader.Text = $"{performFeaturesCount} problems should be fixed (just a recommendation).\r\n";
+            // Last but not least Check for app updates
+            this.App.CheckForUpdates();
 
-            btnFix.Visible =
-            btnRestore.Visible = true;
+            lnkSubHeader.Text = $"{performFeaturesCount} problems should be fixed (just a recommendation).\r\n";
         }
 
         private void SelectFeatureNodes(TreeNodeCollection trNodeCollection, bool isCheck)
@@ -344,8 +351,6 @@ namespace LoveWindowsAgain
 
         private async void ApplyFeatures(List<FeatureNode> treeNodes)
         {
-            btnFix.Enabled = false;
-            btnRestore.Enabled = false;
             treeFeatures.Enabled = false;
 
             foreach (FeatureNode node in treeNodes)
@@ -362,15 +367,11 @@ namespace LoveWindowsAgain
             DoProgress(100);
             lnkSubHeader.Text = "";
 
-            btnFix.Enabled = true;
-            btnRestore.Enabled = true;
             treeFeatures.Enabled = true;
         }
 
         private async void UndoFeatures(List<FeatureNode> treeNodes)
         {
-            btnRestore.Enabled = false;
-            btnFix.Enabled = false;
             treeFeatures.Enabled = false;
 
             foreach (FeatureNode node in treeNodes)
@@ -387,9 +388,32 @@ namespace LoveWindowsAgain
             DoProgress(100);
             lnkSubHeader.Text = "";
 
-            btnRestore.Enabled = true;
-            btnFix.Enabled = true;
             treeFeatures.Enabled = true;
+        }
+
+        private void menuFix_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(richLog.Text))
+            {
+                MessageBox.Show("No analyze has taken place yet");
+                return;
+            }
+
+            Reset();
+
+            List<FeatureNode> performNodes = CollectFeatureNodes();
+            ApplyFeatures(performNodes);
+        }
+
+        private void menuRestore_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to restore selected features to Windows default state?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                Reset();
+
+                List<FeatureNode> performNodes = CollectFeatureNodes();
+                UndoFeatures(performNodes);
+            }
         }
 
         private void treeFeatures_AfterCheck(object sender, TreeViewEventArgs e)
@@ -404,33 +428,12 @@ namespace LoveWindowsAgain
             treeFeatures.EndUpdate();
         }
 
-        private void btnFix_Click(object sender, EventArgs e)
-        {
-            Reset();
-
-            List<FeatureNode> performNodes = CollectFeatureNodes();
-            ApplyFeatures(performNodes);
-        }
-
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Do you want to restore selected features to Windows default state?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                Reset();
-
-                List<FeatureNode> performNodes = CollectFeatureNodes();
-                UndoFeatures(performNodes);
-            }
-        }
-
         private void menuAdvanced_Click(object sender, EventArgs e)
         {
             menuAdvanced.Checked = !(menuAdvanced.Checked);
 
             if (menuAdvanced.Checked == true)
             {
-                btnFix.Visible =
-                btnRestore.Visible =
                 treeFeatures.Visible = true;
                 treeFeatures.BringToFront();
             }
@@ -448,13 +451,13 @@ namespace LoveWindowsAgain
         private void richLog_LinkClicked(object sender, LinkClickedEventArgs e)
             => Utils.LaunchUri(e.LinkText);
 
+        private void btnAppOptions_Click(object sender, EventArgs e)
+             => this.contextAppMenu.Show(Cursor.Position.X, Cursor.Position.Y);
+
         private void btnMenu_Click(object sender, EventArgs e)
-            => this.contextMenuApp.Show(Cursor.Position.X, Cursor.Position.Y);
+            => this.contextKebapMenu.Show(Cursor.Position.X, Cursor.Position.Y);
 
         private void lnkSubHeader_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             => menuAdvanced.PerformClick();
-
-        private void richLog_LinkClicked_1(object sender, LinkClickedEventArgs e)
-            => Utils.LaunchUri(e.LinkText);
     }
 }

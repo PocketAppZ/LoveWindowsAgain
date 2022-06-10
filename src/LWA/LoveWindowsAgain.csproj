@@ -105,6 +105,8 @@
     <Compile Include="Features\Privacy\TailoredExperiences.cs" />
     <Compile Include="Features\Privacy\Telemetry.cs" />
     <Compile Include="Features\Privacy\WindowsTips.cs" />
+    <Compile Include="Features\Apps\StoreApps.cs" />
+    <Compile Include="Features\Apps\StoreAppsEngine.cs" />
     <Compile Include="Features\System\FaxPrinter.cs" />
     <Compile Include="Features\System\FullContextMenus.cs" />
     <Compile Include="Features\System\OneDriveR.cs" />

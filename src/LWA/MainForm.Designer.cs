@@ -31,25 +31,31 @@
             this.components = new System.ComponentModel.Container();
             this.pnlForm = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnAppOptions = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnKebapMenu = new System.Windows.Forms.Button();
             this.btnAnalyze = new System.Windows.Forms.Button();
             this.lnkSubHeader = new System.Windows.Forms.LinkLabel();
-            this.btnRestore = new System.Windows.Forms.Button();
             this.progress = new System.Windows.Forms.ProgressBar();
-            this.btnFix = new System.Windows.Forms.Button();
             this.lblTools = new System.Windows.Forms.Label();
             this.cmbTools = new System.Windows.Forms.ComboBox();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.treeFeatures = new System.Windows.Forms.TreeView();
             this.richLog = new System.Windows.Forms.RichTextBox();
-            this.contextMenuApp = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.treeFeatures = new System.Windows.Forms.TreeView();
+            this.contextKebapMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuAdvanced = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIgnoreLowLevelP = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextAppMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuFix = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFixInfo = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuRestore = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRestoreInfo = new System.Windows.Forms.ToolStripTextBox();
             this.pnlForm.SuspendLayout();
             this.pnlMain.SuspendLayout();
-            this.contextMenuApp.SuspendLayout();
+            this.contextKebapMenu.SuspendLayout();
+            this.contextAppMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlForm
@@ -65,24 +71,38 @@
             // pnlMain
             // 
             this.pnlMain.AutoScroll = true;
+            this.pnlMain.Controls.Add(this.btnAppOptions);
             this.pnlMain.Controls.Add(this.btnSettings);
             this.pnlMain.Controls.Add(this.label1);
-            this.pnlMain.Controls.Add(this.btnMenu);
+            this.pnlMain.Controls.Add(this.btnKebapMenu);
             this.pnlMain.Controls.Add(this.btnAnalyze);
             this.pnlMain.Controls.Add(this.lnkSubHeader);
-            this.pnlMain.Controls.Add(this.btnRestore);
             this.pnlMain.Controls.Add(this.progress);
-            this.pnlMain.Controls.Add(this.btnFix);
             this.pnlMain.Controls.Add(this.lblTools);
             this.pnlMain.Controls.Add(this.cmbTools);
             this.pnlMain.Controls.Add(this.lblHeader);
-            this.pnlMain.Controls.Add(this.richLog);
             this.pnlMain.Controls.Add(this.treeFeatures);
+            this.pnlMain.Controls.Add(this.richLog);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1019, 801);
             this.pnlMain.TabIndex = 0;
+            // 
+            // btnAppOptions
+            // 
+            this.btnAppOptions.AutoEllipsis = true;
+            this.btnAppOptions.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnAppOptions.FlatAppearance.BorderSize = 0;
+            this.btnAppOptions.Font = new System.Drawing.Font("Segoe Fluent Icons", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppOptions.ForeColor = System.Drawing.Color.White;
+            this.btnAppOptions.Location = new System.Drawing.Point(350, 213);
+            this.btnAppOptions.Name = "btnAppOptions";
+            this.btnAppOptions.Size = new System.Drawing.Size(54, 42);
+            this.btnAppOptions.TabIndex = 178;
+            this.btnAppOptions.Text = "...";
+            this.btnAppOptions.UseVisualStyleBackColor = false;
+            this.btnAppOptions.Click += new System.EventHandler(this.btnAppOptions_Click);
             // 
             // btnSettings
             // 
@@ -110,22 +130,22 @@
             this.label1.TabIndex = 176;
             this.label1.Text = "Hello friend!";
             // 
-            // btnMenu
+            // btnKebapMenu
             // 
-            this.btnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Segoe Fluent Icons", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMenu.Location = new System.Drawing.Point(977, 0);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(42, 38);
-            this.btnMenu.TabIndex = 175;
-            this.btnMenu.Text = "...";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.btnKebapMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKebapMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnKebapMenu.FlatAppearance.BorderSize = 0;
+            this.btnKebapMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnKebapMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKebapMenu.Font = new System.Drawing.Font("Segoe Fluent Icons", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKebapMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnKebapMenu.Location = new System.Drawing.Point(977, 0);
+            this.btnKebapMenu.Name = "btnKebapMenu";
+            this.btnKebapMenu.Size = new System.Drawing.Size(42, 38);
+            this.btnKebapMenu.TabIndex = 175;
+            this.btnKebapMenu.Text = "...";
+            this.btnKebapMenu.UseVisualStyleBackColor = true;
+            this.btnKebapMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnAnalyze
             // 
@@ -159,46 +179,15 @@
             this.lnkSubHeader.TabIndex = 171;
             this.lnkSubHeader.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSubHeader_LinkClicked);
             // 
-            // btnRestore
-            // 
-            this.btnRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestore.FlatAppearance.BorderSize = 0;
-            this.btnRestore.Font = new System.Drawing.Font("Segoe UI Variable Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestore.ForeColor = System.Drawing.Color.Black;
-            this.btnRestore.Location = new System.Drawing.Point(794, 214);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(118, 42);
-            this.btnRestore.TabIndex = 173;
-            this.btnRestore.Text = "Restore";
-            this.btnRestore.UseVisualStyleBackColor = true;
-            this.btnRestore.Visible = false;
-            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
-            // 
             // progress
             // 
             this.progress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progress.Location = new System.Drawing.Point(72, 289);
+            this.progress.Location = new System.Drawing.Point(72, 285);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(837, 5);
+            this.progress.Size = new System.Drawing.Size(856, 5);
             this.progress.TabIndex = 166;
             this.progress.Visible = false;
-            // 
-            // btnFix
-            // 
-            this.btnFix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFix.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnFix.FlatAppearance.BorderSize = 0;
-            this.btnFix.Font = new System.Drawing.Font("Segoe UI Variable Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFix.ForeColor = System.Drawing.Color.White;
-            this.btnFix.Location = new System.Drawing.Point(670, 214);
-            this.btnFix.Name = "btnFix";
-            this.btnFix.Size = new System.Drawing.Size(118, 42);
-            this.btnFix.TabIndex = 174;
-            this.btnFix.Text = "Fix";
-            this.btnFix.UseVisualStyleBackColor = false;
-            this.btnFix.Visible = false;
-            this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
             // 
             // lblTools
             // 
@@ -244,6 +233,26 @@
     " app will scan your system and optimize your settings to make sure your PC is ru" +
     "nning the best it can.";
             // 
+            // richLog
+            // 
+            this.richLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richLog.BackColor = System.Drawing.Color.White;
+            this.richLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richLog.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richLog.Font = new System.Drawing.Font("Segoe UI Variable Text Semiligh", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richLog.HideSelection = false;
+            this.richLog.Location = new System.Drawing.Point(72, 305);
+            this.richLog.Name = "richLog";
+            this.richLog.ReadOnly = true;
+            this.richLog.Size = new System.Drawing.Size(861, 360);
+            this.richLog.TabIndex = 138;
+            this.richLog.Text = "";
+            this.richLog.Visible = false;
+            this.richLog.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richLog_LinkClicked);
+            // 
             // treeFeatures
             // 
             this.treeFeatures.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -262,40 +271,21 @@
             this.treeFeatures.ShowLines = false;
             this.treeFeatures.ShowNodeToolTips = true;
             this.treeFeatures.ShowRootLines = false;
-            this.treeFeatures.Size = new System.Drawing.Size(837, 360);
+            this.treeFeatures.Size = new System.Drawing.Size(858, 360);
             this.treeFeatures.TabIndex = 168;
             this.treeFeatures.Visible = false;
             this.treeFeatures.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeFeatures_AfterCheck);
             // 
-            // richLog
+            // contextKebapMenu
             // 
-            this.richLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richLog.BackColor = System.Drawing.Color.White;
-            this.richLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richLog.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richLog.Font = new System.Drawing.Font("Segoe UI Variable Text Semiligh", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richLog.HideSelection = false;
-            this.richLog.Location = new System.Drawing.Point(72, 305);
-            this.richLog.Name = "richLog";
-            this.richLog.ReadOnly = true;
-            this.richLog.Size = new System.Drawing.Size(837, 360);
-            this.richLog.TabIndex = 138;
-            this.richLog.Text = "";
-            this.richLog.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richLog_LinkClicked_1);
-            // 
-            // contextMenuApp
-            // 
-            this.contextMenuApp.BackColor = System.Drawing.SystemColors.Control;
-            this.contextMenuApp.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuApp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextKebapMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.contextKebapMenu.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextKebapMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAdvanced,
             this.menuIgnoreLowLevelP});
-            this.contextMenuApp.Name = "menuMain";
-            this.contextMenuApp.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuApp.Size = new System.Drawing.Size(265, 56);
+            this.contextKebapMenu.Name = "menuMain";
+            this.contextKebapMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextKebapMenu.Size = new System.Drawing.Size(265, 56);
             // 
             // menuAdvanced
             // 
@@ -312,6 +302,64 @@
             this.menuIgnoreLowLevelP.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.menuIgnoreLowLevelP.Click += new System.EventHandler(this.menuIgnoreLowLevelP_Click);
             // 
+            // contextAppMenu
+            // 
+            this.contextAppMenu.AutoSize = false;
+            this.contextAppMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.contextAppMenu.Font = new System.Drawing.Font("Segoe UI Variable Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextAppMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuFix,
+            this.menuFixInfo,
+            this.toolStripSeparator1,
+            this.menuRestore,
+            this.menuRestoreInfo});
+            this.contextAppMenu.Name = "menuMain";
+            this.contextAppMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextAppMenu.Size = new System.Drawing.Size(361, 120);
+            // 
+            // menuFix
+            // 
+            this.menuFix.Name = "menuFix";
+            this.menuFix.Size = new System.Drawing.Size(360, 30);
+            this.menuFix.Text = "Fix problems";
+            this.menuFix.Click += new System.EventHandler(this.menuFix_Click);
+            // 
+            // menuFixInfo
+            // 
+            this.menuFixInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.menuFixInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.menuFixInfo.Enabled = false;
+            this.menuFixInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuFixInfo.Margin = new System.Windows.Forms.Padding(5, 1, 1, 1);
+            this.menuFixInfo.Name = "menuFixInfo";
+            this.menuFixInfo.Size = new System.Drawing.Size(300, 16);
+            this.menuFixInfo.Text = "This will fix all found and selected problems";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.AutoSize = false;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(357, 10);
+            // 
+            // menuRestore
+            // 
+            this.menuRestore.Name = "menuRestore";
+            this.menuRestore.Size = new System.Drawing.Size(360, 30);
+            this.menuRestore.Text = "Restore settings";
+            this.menuRestore.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.menuRestore.Click += new System.EventHandler(this.menuRestore_Click);
+            // 
+            // menuRestoreInfo
+            // 
+            this.menuRestoreInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.menuRestoreInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.menuRestoreInfo.Enabled = false;
+            this.menuRestoreInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuRestoreInfo.Margin = new System.Windows.Forms.Padding(5, 1, 1, 1);
+            this.menuRestoreInfo.Name = "menuRestoreInfo";
+            this.menuRestoreInfo.Size = new System.Drawing.Size(300, 16);
+            this.menuRestoreInfo.Text = "This will restore the default settings ";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -327,7 +375,9 @@
             this.pnlForm.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
-            this.contextMenuApp.ResumeLayout(false);
+            this.contextKebapMenu.ResumeLayout(false);
+            this.contextAppMenu.ResumeLayout(false);
+            this.contextAppMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,17 +390,22 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnAnalyze;
         private System.Windows.Forms.RichTextBox richLog;
-        private System.Windows.Forms.Button btnFix;
-        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.ProgressBar progress;
         private System.Windows.Forms.LinkLabel lnkSubHeader;
         private System.Windows.Forms.TreeView treeFeatures;
-        private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.ContextMenuStrip contextMenuApp;
+        private System.Windows.Forms.Button btnKebapMenu;
+        private System.Windows.Forms.ContextMenuStrip contextKebapMenu;
         private System.Windows.Forms.ToolStripMenuItem menuAdvanced;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.ToolStripMenuItem menuIgnoreLowLevelP;
+        private System.Windows.Forms.Button btnAppOptions;
+        private System.Windows.Forms.ContextMenuStrip contextAppMenu;
+        private System.Windows.Forms.ToolStripMenuItem menuFix;
+        private System.Windows.Forms.ToolStripTextBox menuFixInfo;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem menuRestore;
+        private System.Windows.Forms.ToolStripTextBox menuRestoreInfo;
     }
 }
 

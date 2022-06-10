@@ -56,7 +56,7 @@ namespace Features.Feature.Desktop
             {
                 using (var client = new WebClient())
                 {
-                    logger.Log("- Installing Widgets app...\nWe've opened the download link in the Microsoft Store.\n\nPlease install the package \"Windows Web Experience Pack\". ");
+                    logger.Log("- Installing Widgets app...\nWe've opened the download link in the Microsoft Store.\nPlease install the package \"Windows Web Experience Pack\". ");
                     Process.Start("ms-windows-store://pdp/?ProductId=9MSSGKG348SP");
 
                     return true;

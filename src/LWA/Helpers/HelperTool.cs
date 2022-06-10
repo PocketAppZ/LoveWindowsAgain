@@ -65,7 +65,7 @@ namespace HelperTool
                           Program.GetCurrentVersionTostring())
 
                     {
-                        logger.Log($"New App-Version {latestVersion} is available.\nDownload the new version here: " + Utils.Uri.URL_GITLATEST);
+                        logger.Log($"Problem on App-Version: [INFO] New version {latestVersion} available. Download here: " + Utils.Uri.URL_GITLATEST);
                     }
                 }
                 catch (Exception ex)
