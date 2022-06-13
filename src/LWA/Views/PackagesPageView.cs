@@ -13,12 +13,15 @@ namespace LoveWindowsAgain
     public partial class PackagesPageView : UserControl
     {
         private List<string> Packages = new List<string>();
+        private List<string> remoteApps = new List<string>();
 
         public PackagesPageView()
         {
             InitializeComponent();
 
             RequestPackagesRemote();
+            listOnline.Items.AddRange(remoteApps.ToArray());
+
             SetStyle();
         }
 
@@ -32,7 +35,6 @@ namespace LoveWindowsAgain
         {
             try
             {
-                List<string> remoteApps = new List<string>();
                 var webRequest = WebRequest.Create(@"https://raw.githubusercontent.com/builtbybel/LoveWindowsAgain/main/assets/packages.git");
                 string app;
 
@@ -46,7 +48,6 @@ namespace LoveWindowsAgain
                             if (!app.StartsWith("#") && (!string.IsNullOrEmpty(app)))
                             {
                                 remoteApps.Add(app);
-                                listOnline.Items.Add(app);
                             }
                         }
                     }
@@ -54,6 +55,20 @@ namespace LoveWindowsAgain
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+        }
+
+
+        private void textSearch_TextChanged(object sender, EventArgs e)
+        {
+            listOnline.Items.Clear();
+
+            foreach (string str in remoteApps)
+            {
+                if (str.IndexOf(textSearch.Text, 0, StringComparison.CurrentCultureIgnoreCase) != -1)
+                {
+                    listOnline.Items.Add(str);
+                }
+            }
         }
 
         private void btnAddAll_Click(object sender, EventArgs e)
@@ -102,12 +117,6 @@ namespace LoveWindowsAgain
             }
             listInstall.Items.Clear();
             RefreshPackages();
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            listOnline.Items.Clear();
-            RequestPackagesRemote();
         }
 
         public void WingetInstallPackage(string packageid)
@@ -172,5 +181,8 @@ namespace LoveWindowsAgain
             mainForm.pnlForm.Controls.Clear();
             if (mainForm.INavPage != null) mainForm.pnlForm.Controls.Add(mainForm.INavPage);
         }
+
+        private void textSearch_Click(object sender, EventArgs e)
+            => textSearch.Text = "";
     }
 }

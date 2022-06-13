@@ -30,7 +30,6 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listOnline = new System.Windows.Forms.ListBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnRemoveAll = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listInstall = new System.Windows.Forms.ListBox();
@@ -41,6 +40,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textSearch = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -74,18 +74,6 @@
             this.listOnline.Size = new System.Drawing.Size(394, 595);
             this.listOnline.Sorted = true;
             this.listOnline.TabIndex = 13;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Variable Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(481, 414);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(89, 23);
-            this.btnRefresh.TabIndex = 48;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnRemoveAll
             // 
@@ -224,15 +212,28 @@
             this.label1.TabIndex = 178;
             this.label1.Text = "Install packages";
             // 
+            // textSearch
+            // 
+            this.textSearch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textSearch.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSearch.ForeColor = System.Drawing.Color.Gray;
+            this.textSearch.Location = new System.Drawing.Point(469, 29);
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(122, 23);
+            this.textSearch.TabIndex = 180;
+            this.textSearch.Text = "Search...";
+            this.textSearch.Click += new System.EventHandler(this.textSearch_Click);
+            this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
+            // 
             // PackagesPageView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.textSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnRemoveAll);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnInstall);
@@ -245,6 +246,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -252,7 +254,6 @@
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox listOnline;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnRemoveAll;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listInstall;
@@ -263,5 +264,6 @@
         public System.Windows.Forms.RichTextBox richTextStatus;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textSearch;
     }
 }
